@@ -28,6 +28,7 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'Attendance',
+      routeName: 'AttendanceScreen',
     },
     {
       id: 2,
@@ -37,6 +38,7 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'Payroll',
+      routeName: 'PayrollScreen',
     },
     {
       id: 3,
@@ -46,6 +48,7 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'My Tasks',
+      routeName: 'taskScreen',
     },
     {
       id: 4,
@@ -55,6 +58,7 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'Circulars',
+      routeName: 'circularsScreen',
     },
     {
       id: 5,
@@ -64,6 +68,7 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'Calendar',
+      routeName: 'CalendarScreen',
     },
     {
       id: 6,
@@ -73,6 +78,7 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'Teams',
+      routeName: 'TeamsScreen',
     },
     {
       id: 7,
@@ -82,11 +88,13 @@ const Services = ({navigation}: any) => {
         </View>
       ),
       name: 'Media Center',
+      routeName: 'MediaCenterScreen',
     },
     {
       id: 8,
       logo: <Neuron width={60} height={60} />,
       name: 'Neuron',
+      routeName: 'NeuronScreen',
     },
     {
       id: 9,
@@ -95,7 +103,8 @@ const Services = ({navigation}: any) => {
           <Esaad width={36} height={36} />
         </View>
       ),
-      name: 'Esaad',
+      name: 'ESAAD',
+      routeName: 'EsaadScreen',
     },
     {
       id: 10,
@@ -104,28 +113,40 @@ const Services = ({navigation}: any) => {
           <Fazaa width={36} height={36} />
         </View>
       ),
-      name: 'Fazaa',
+      name: 'FAZAA',
+      routeName: 'FazaaScreen',
     },
   ];
+
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container}>
         {services.map(service => (
-          <TouchableOpacity key={service.id} style={styles.serviceItem}>
+          <TouchableOpacity
+            key={service.id}
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate(service.routeName)}>
             {service.logo}
-            <Text style={styles.serviceName}>{service.name}</Text>
+            <Text
+              style={styles.serviceName}
+              numberOfLines={1}
+              ellipsizeMode="tail">
+              {service.name}
+            </Text>
           </TouchableOpacity>
         ))}
         <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('PendingActions');
-          }}
-          style={[
-            styles.iconWrapper,
-            styles.addIconWrapper,
-            {backgroundColor: '#177DB71A'},
-          ]}>
-          <Add width={36} height={36} />
+          onPress={() => navigation.navigate('PendingActions')}
+          style={styles.serviceItem}>
+          <View
+            style={[
+              styles.iconWrapper,
+              styles.addIconWrapper,
+              {backgroundColor: '#177DB71A'},
+            ]}>
+            <Add width={36} height={36} />
+          </View>
+          <Text style={styles.serviceName}>Add More</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -163,13 +184,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#0095CF',
     borderStyle: 'dashed',
-    marginLeft: 15,
   },
   serviceName: {
     fontWeight: '400',
     fontSize: 15,
     color: '#1A1A1A',
-    marginTop: 20,
+    marginTop: hp(2),
+    textAlign: 'center',
   },
 });
 

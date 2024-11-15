@@ -8,7 +8,6 @@ import {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
   },
   modelContainer: {
@@ -25,46 +24,59 @@ export const styles = StyleSheet.create({
   heading: {
     fontSize: fonts.fontSize['2xl'],
     textAlign: 'center',
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
-    lineHeight: 32,
     color: colors.primaryBlack,
-    marginBottom: hp(3),
+    marginBottom: hp(2),
+  },
+  listContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  monthYearButton: {
+    margin: wp(1),
+    borderRadius: 71,
+    backgroundColor: colors.white,
+    borderWidth: 1,
+    borderColor: colors.background,
+    width: '23%',
+    height: 40,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  selectedButton: {
+    backgroundColor: '#20AAE2',
+  },
+  monthYearText: {
+    fontSize: fonts.fontSize.large,
+    fontFamily: fonts.fontFamily.primary,
+    color: colors.secondary,
+  },
+  selectedText: {
+    color: colors.white,
+  },
+  toggleButtonText: {
+    color: colors.primaryBlack,
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
+    textAlign: 'center',
+    marginVertical: hp(2),
   },
   closeButtonText: {
     color: colors.darkGray,
     fontSize: fonts.fontSize.xl,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     textAlign: 'center',
   },
-  flexbetween: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: hp(2),
-  },
-  sectionTitle: {
-    color: colors.primaryBlack,
-    fontSize: fonts.fontSize.large,
-    fontWeight: '500',
-    fontFamily: fonts.fontFamily.medium,
-    lineHeight: 24,
-  },
-  dateInputContainer: {
-    borderWidth: 1,
-    borderColor: colors.grey,
-    padding: 12,
-    borderRadius: 8,
-    backgroundColor: colors.white,
+  yearNavigation: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: hp(3),
   },
-  dateText: {
-    fontSize: fonts.fontSize.large,
+  yearRangeText: {
     color: colors.primaryBlack,
-    fontFamily: fonts.fontFamily.primary,
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
   },
 });

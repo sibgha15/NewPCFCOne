@@ -1,48 +1,41 @@
 import {StyleSheet} from 'react-native';
-import {colors, fonts} from '../../../../res/themes';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {colors, fonts} from '../../../res/themes';
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+  header: {
+    paddingHorizontal: wp(4),
+    paddingVertical: hp(2),
+    paddingBottom: hp(4),
+    position: 'relative',
   },
-  modelContainer: {
+  headerText: {
+    color: colors.white,
+    fontSize: fonts.fontSize['2xl'],
+    fontWeight: '500',
+    textAlign: 'center',
+    fontFamily: fonts.fontFamily.medium,
+  },
+  backIcon: {
     position: 'absolute',
-    bottom: 0,
+    left: wp(3),
+    top: hp(2.9),
+    zIndex: 1,
+  },
+  mainContainer: {
+    flex: 1,
     backgroundColor: colors.background,
-    width: '100%',
+    marginTop: -hp(3),
+    paddingVertical: hp(4),
+    paddingBottom: hp(2),
+    paddingHorizontal: wp(4),
     borderTopLeftRadius: 32,
     borderTopRightRadius: 32,
-    paddingVertical: hp(3),
-    paddingBottom: hp(4),
-    paddingHorizontal: wp(4),
-  },
-  heading: {
-    fontSize: fonts.fontSize['2xl'],
-    textAlign: 'center',
-    fontWeight: '500',
-    fontFamily: fonts.fontFamily.medium,
-    lineHeight: 32,
-    color: colors.primaryBlack,
-    marginBottom: hp(3),
-  },
-  closeButtonText: {
-    color: colors.darkGray,
-    fontSize: fonts.fontSize.xl,
-    fontWeight: '500',
-    fontFamily: fonts.fontFamily.medium,
-    textAlign: 'center',
-  },
-  flexbetween: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    marginBottom: hp(2),
   },
   sectionTitle: {
     color: colors.primaryBlack,
@@ -66,5 +59,11 @@ export const styles = StyleSheet.create({
     fontSize: fonts.fontSize.large,
     color: colors.primaryBlack,
     fontFamily: fonts.fontFamily.primary,
+  },
+  closeButtonText: {
+    color: colors.darkGray,
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
+    textAlign: 'center',
   },
 });

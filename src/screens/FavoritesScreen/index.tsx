@@ -54,7 +54,7 @@ const FavoritesScreen = () => {
         <View style={styles.mainContainer}>
           <View style={styles.cardContainer}>
             <ToggleCard
-              icon={<Attendance width={22.17} height={22.17} />}
+              icon={<Attendance width={28} height={28} />}
               iconBgColor="#883BA91A"
               label="Attendance"
               isEnabled={toggleStates.attendance}
@@ -62,7 +62,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Payroll width={22.17} height={22.17} />}
+              icon={<Payroll width={28} height={28} />}
               iconBgColor="#8DC83A1A"
               label="Payroll"
               isEnabled={toggleStates.payroll}
@@ -70,7 +70,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Circulars width={22.17} height={22.17} />}
+              icon={<Circulars width={28} height={28} />}
               iconBgColor="#FBD3041A"
               label="Circulars"
               isEnabled={toggleStates.circulars}
@@ -78,7 +78,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<MyTasks width={22.17} height={22.17} />}
+              icon={<MyTasks width={28} height={28} />}
               iconBgColor="#177DB71A"
               label="My Tasks"
               isEnabled={toggleStates.myTasks}
@@ -86,7 +86,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Stars width={22.17} height={22.17} />}
+              icon={<Stars width={28} height={28} />}
               iconBgColor="#883BA91A"
               label="Star of the Month"
               isEnabled={toggleStates.starOfTheMonth}
@@ -94,7 +94,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Work width={22.17} height={22.17} />}
+              icon={<Work width={28} height={28} />}
               iconBgColor="#883BA91A"
               label="Career & Performance"
               isEnabled={toggleStates.careerPerformance}
@@ -102,7 +102,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Calendar width={22.17} height={22.17} />}
+              icon={<Calendar width={28} height={28} />}
               iconBgColor="#F83E3E1A"
               label="Calendar"
               isEnabled={toggleStates.calendar}
@@ -110,7 +110,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Teams width={22.17} height={22.17} />}
+              icon={<Teams width={28} height={28} />}
               iconBgColor="#5059C91A"
               label="Teams"
               isEnabled={toggleStates.teams}
@@ -118,7 +118,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<MediaCenter width={22.17} height={22.17} />}
+              icon={<MediaCenter width={28} height={28} />}
               iconBgColor="#F83E3E1A"
               label="Media Center"
               isEnabled={toggleStates.mediaCenter}
@@ -126,7 +126,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Recipt width={22.17} height={22.17} />}
+              icon={<Recipt width={28} height={28} />}
               iconBgColor="#883BA91A"
               label="Surveys"
               isEnabled={toggleStates.surveys}
@@ -134,7 +134,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Neuron width={43} height={43} />}
+              icon={<Neuron width={43} height={45} />}
               iconBgColor="#AEAEAE"
               label="Neuron"
               isEnabled={toggleStates.neuron}
@@ -142,7 +142,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Esaad width={22.17} height={22.17} />}
+              icon={<Esaad width={28} height={28} />}
               iconBgColor="#038756"
               label="ESAAD"
               isEnabled={toggleStates.esaad}
@@ -150,7 +150,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<Fazaa width={22.17} height={22.17} />}
+              icon={<Fazaa width={28} height={28} />}
               iconBgColor="#C09949"
               label="FAZAA"
               isEnabled={toggleStates.fazaa}
@@ -158,7 +158,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<HandSHake width={22.17} height={22.17} />}
+              icon={<HandSHake width={28} height={28} />}
               iconBgColor="#177DB71A"
               label="Partners"
               isEnabled={toggleStates.partners}
@@ -166,7 +166,7 @@ const FavoritesScreen = () => {
             />
             <View style={styles.separator} />
             <ToggleCard
-              icon={<CurrencyExchange width={22.17} height={22.17} />}
+              icon={<CurrencyExchange width={28} height={28} />}
               iconBgColor="#8DC83A1A"
               label="Currency Exchange"
               isEnabled={toggleStates.currencyExchange}

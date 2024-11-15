@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#4d4d4d',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
   },
   modelContainer: {
     position: 'absolute',

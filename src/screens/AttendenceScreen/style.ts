@@ -61,10 +61,18 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     gap: hp(2),
   },
+  flexView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: wp(4),
+  },
   card: {
     padding: 16,
     borderRadius: 12,
     backgroundColor: colors.white,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   cardIconWrapper: {
     width: 40,
@@ -72,17 +80,7 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#883BA91A',
-  },
-  cardRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  cardRowInner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
+    backgroundColor: '#177DB71A',
   },
   cardBadge: {
     borderWidth: 1,
@@ -91,46 +89,14 @@ export const styles = StyleSheet.create({
     paddingVertical: 5,
     borderRadius: 30,
   },
-  inProgressBadge: {
-    paddingVertical: 4,
-    paddingHorizontal: 12,
-    backgroundColor: '#FFB35B1A',
-    borderRadius: 30,
-  },
-  inProgressText: {
-    fontSize: fonts.fontSize.small,
-    color: '#D78B33',
-    fontWeight: '500',
-    fontFamily: fonts.fontFamily.medium,
-  },
-  isCompletetedBadge: {
-    paddingVertical: 4,
-    paddingHorizontal: 12,
-    backgroundColor: '#41C1791A',
-    borderRadius: 30,
-  },
-  isCompletetedText: {
-    fontSize: fonts.fontSize.small,
-    color: '#279457',
-    fontWeight: '500',
-    fontFamily: fonts.fontFamily.medium,
-  },
-  cardTitle: {
+  cardText: {
     fontSize: fonts.fontSize.large,
     fontFamily: fonts.fontFamily.medium,
     color: colors.primaryBlack,
-    lineHeight: 24,
-    paddingTop: 16,
   },
-  cardInfoText: {
-    color: colors.darkGray,
-    fontSize: fonts.fontSize.normal,
-    fontWeight: '400',
+  numberOfLeaves: {
+    fontSize: fonts.fontSize.large,
     fontFamily: fonts.fontFamily.primary,
-  },
-  userInfoContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+    color: colors.secondary,
   },
 });

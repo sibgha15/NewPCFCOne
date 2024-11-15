@@ -1,6 +1,5 @@
 import HomeIcon from './homeInActive.svg';
 import ServicesIcon from './services.svg';
-import ChatBotIcon from './chatbot.svg';
 import ActivityIcon from './activity.svg';
 import MenuIcon from './menu.svg';
 import HomeIconActive from './home.svg';
@@ -67,9 +66,30 @@ import WhiteFilterIcon from './whiteFilterIcon.svg';
 import Group from './group.svg';
 import StoreFront from './storefront.svg';
 import PrimaryCalender from './calendar_today.svg';
+import ChatBotIcon from './chatBotIcon.svg';
+import LeftArrow from './chevron_backward.svg';
+import RightArrow from './chevron_forward.svg';
+import Dot from './dot.svg';
+import BreakingNews from './breaking_news.svg';
+import ImageIcon from './image.svg';
+import GraySearchIcon from './graySearchIcon.svg';
+import Subscriptions from './subscriptions.svg';
+import InfoIcon from './info_i.svg';
+import MoreInfo from './more_info.svg';
+import CalendarClockIcon from './calendar_clock.svg';
 
 export {
   UserAccount,
+  CalendarClockIcon,
+  ImageIcon,
+  MoreInfo,
+  Subscriptions,
+  InfoIcon,
+  GraySearchIcon,
+  BreakingNews,
+  Dot,
+  LeftArrow,
+  RightArrow,
   Recipt,
   StoreFront,
   PrimaryCalender,

@@ -80,7 +80,11 @@ const MyTasksFilterModel = ({onClose}: any) => {
                 Start Date
               </Text>
               <View style={styles.dateInputContainer}>
-                <Text style={styles.dateText}>
+                <Text
+                  style={[
+                    styles.dateText,
+                    {color: startDate ? colors.primaryBlack : colors.lightGrey},
+                  ]}>
                   {startDate || 'Select Start Date'}
                 </Text>
                 <TouchableOpacity
@@ -98,7 +102,11 @@ const MyTasksFilterModel = ({onClose}: any) => {
                 End Date
               </Text>
               <View style={styles.dateInputContainer}>
-                <Text style={styles.dateText}>
+                <Text
+                  style={[
+                    styles.dateText,
+                    {color: endDate ? colors.primaryBlack : colors.lightGrey},
+                  ]}>
                   {endDate || 'Select End Date'}
                 </Text>
                 <TouchableOpacity
@@ -171,7 +179,7 @@ const MyTasksFilterModel = ({onClose}: any) => {
       <Modal
         transparent={true}
         visible={openModel}
-        animationType="slide"
+        animationType="fade"
         onRequestClose={() => setOpenModel(false)}>
         <CalenderModel
           onClose={() => setOpenModel(false)}

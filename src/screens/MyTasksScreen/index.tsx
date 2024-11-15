@@ -94,6 +94,11 @@ const TaskScreen = () => {
     const isCompleted = task.status === 'COMPLETED';
     const IconComponent = task.icon;
 
+    const truncatedCardBadge =
+      task.cardBadge.length > 25
+        ? `${task.cardBadge.substring(0, 22)}...`
+        : task.cardBadge;
+
     return (
       <View key={task.id} style={styles.card}>
         <View style={styles.cardRow}>
@@ -106,7 +111,7 @@ const TaskScreen = () => {
               <IconComponent />
             </View>
             <View style={styles.cardBadge}>
-              <Text>{task.cardBadge}</Text>
+              <Text>{truncatedCardBadge}</Text>
             </View>
           </View>
           <View
@@ -114,6 +119,7 @@ const TaskScreen = () => {
               isCompleted ? styles.isCompletetedBadge : styles.inProgressBadge
             }>
             <Text
+              ellipsizeMode="tail"
               style={
                 isCompleted ? styles.isCompletetedText : styles.inProgressText
               }>
@@ -134,7 +140,7 @@ const TaskScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -218,7 +224,7 @@ const TaskScreen = () => {
         onRequestClose={() => setOpenModel(false)}>
         <MyTasksFilterModel onClose={() => setOpenModel(false)} />
       </Modal>
-    </SafeAreaView>
+    </View>
   );
 };
 

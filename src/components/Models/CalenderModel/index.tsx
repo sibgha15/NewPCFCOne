@@ -3,12 +3,17 @@ import {Text, View, TouchableOpacity} from 'react-native';
 import RoundedButton from '../../common/roundedButton';
 import {styles} from './style';
 import {Calendar} from 'react-native-calendars';
+import {format, isBefore} from 'date-fns';
 
 const CalenderModel = ({onClose, onSelectDate}: any) => {
   const [selected, setSelected] = useState('');
 
+  const today = format(new Date(), 'yyyy-MM-dd');
+
   const handleApply = () => {
-    onSelectDate(selected);
+    if (selected) {
+      onSelectDate(selected);
+    }
   };
 
   return (
@@ -18,8 +23,13 @@ const CalenderModel = ({onClose, onSelectDate}: any) => {
 
         <View style={styles.calenderContainer}>
           <Calendar
+            current={today}
+            minDate={today}
             onDayPress={day => {
-              setSelected(day.dateString);
+              const selectedDate = day.dateString;
+              if (!isBefore(new Date(selectedDate), new Date(today))) {
+                setSelected(selectedDate);
+              }
             }}
             theme={{
               backgroundColor: '#ffffff',
@@ -29,7 +39,7 @@ const CalenderModel = ({onClose, onSelectDate}: any) => {
               selectedDayTextColor: '#0A7AFF',
               todayTextColor: '#00adf5',
               dayTextColor: '#2d4150',
-              textDisabledColor: '#dd99ee',
+              textDisabledColor: '#d9e1e8',
             }}
             markedDates={{
               [selected]: {
@@ -38,6 +48,8 @@ const CalenderModel = ({onClose, onSelectDate}: any) => {
                 selectedDotColor: 'orange',
               },
             }}
+            hideExtraDays={true}
+            disableAllTouchEventsForDisabledDays={true}
           />
         </View>
 

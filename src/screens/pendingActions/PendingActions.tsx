@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {
   View,
-  SafeAreaView,
   ScrollView,
   Text,
   FlatList,
@@ -27,6 +26,7 @@ const actionData = [
     designation: 'Duration: 5 days',
     status: 'pending',
     icon: <InCompleteTask />,
+    backgroundColor: '#177DB71A',
   },
   {
     id: '2',
@@ -34,6 +34,7 @@ const actionData = [
     designation: '10-Aug-2024',
     status: 'pending',
     icon: <CompleteTask />,
+    backgroundColor: '#177DB71A',
   },
   {
     id: '3',
@@ -41,6 +42,7 @@ const actionData = [
     designation: 'Duration: 1 day',
     status: 'pending',
     icon: <InCompleteTask />,
+    backgroundColor: '#177DB71A',
   },
   {
     id: '4',
@@ -48,6 +50,7 @@ const actionData = [
     designation: '10-Aug-2024',
     status: 'pending',
     icon: <CompleteTask />,
+    backgroundColor: '#177DB71A',
   },
   {
     id: '5',
@@ -55,6 +58,7 @@ const actionData = [
     designation: '10-Aug-2024',
     status: 'pending',
     icon: <VideoLibrary />,
+    backgroundColor: '#F83E3E1A',
   },
 ];
 
@@ -64,7 +68,13 @@ const PendingActions = () => {
   const renderServiceItem = ({item}: any) => (
     <View style={styles.listContainer}>
       <View style={styles.userAvatarContainer}>
-        <View style={styles.iconContainer}>{item.icon}</View>
+        <View
+          style={[
+            styles.iconContainer,
+            {backgroundColor: item.backgroundColor || '#FFF'},
+          ]}>
+          {item.icon}
+        </View>
         <View style={styles.list}>
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.designation}>{item.designation}</Text>
@@ -75,9 +85,8 @@ const PendingActions = () => {
       </View>
     </View>
   );
-  return (
-    // <SafeAreaView style={{flex: 1}}>
 
+  return (
     <View style={styles.container}>
       <StatusBar
         barStyle="dark-content"
@@ -112,8 +121,6 @@ const PendingActions = () => {
         <ActionsFilter onClose={() => setOpenModel(false)} />
       </Modal>
     </View>
-
-    // </SafeAreaView>
   );
 };
 

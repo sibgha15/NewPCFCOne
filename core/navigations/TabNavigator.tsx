@@ -22,6 +22,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 import PendingActions from '../../src/screens/pendingActions/PendingActions';
 import MenuStack from './MenuStack';
 import SearchScreen from '../../src/screens/SearchScreen';
+import PayrollScreen from '../../src/screens/PayrollScreen';
+import TaskScreen from '../../src/screens/MyTasksScreen';
+import CircularsScreen from '../../src/screens/CircularsScreen';
+import AttendanceScreen from '../../src/screens/AttendenceScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 function HomeStack() {
@@ -30,6 +34,10 @@ function HomeStack() {
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="PendingActions" component={PendingActions} />
       <Stack.Screen name="searchScreen" component={SearchScreen} />
+      <Stack.Screen name="PayrollScreen" component={PayrollScreen} />
+      <Stack.Screen name="taskScreen" component={TaskScreen} />
+      <Stack.Screen name="circularsScreen" component={CircularsScreen} />
+      <Stack.Screen name="AttendanceScreen" component={AttendanceScreen} />
     </Stack.Navigator>
   );
 }
@@ -51,8 +59,8 @@ export default function TabNavigator() {
             IconComponent = focused ? HomeIconActive : HomeIcon;
           } else if (route.name === 'Services') {
             IconComponent = focused ? ServiceIconActive : ServicesIcon;
-          } else if (route.name === 'Chatbot') {
-            IconComponent = focused ? ChatBotIconActive : ChatBotIcon;
+          } else if (route.name === 'PCFC AI') {
+            IconComponent = focused ? ChatBotIcon : ChatBotIcon;
           } else if (route.name === 'Activity') {
             IconComponent = focused ? ActivityIconActive : ActivityIcon;
           } else if (route.name === 'Menu') {
@@ -67,7 +75,7 @@ export default function TabNavigator() {
       })}>
       <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Services" component={ServicesScreen} />
-      <Tab.Screen name="Chatbot" component={ChatbotScreen} />
+      <Tab.Screen name="PCFC AI" component={ChatbotScreen} />
       <Tab.Screen name="Activity" component={ActivityScreen} />
       <Tab.Screen name="Menu" component={MenuStack} />
     </Tab.Navigator>
