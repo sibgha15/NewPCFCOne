@@ -25,7 +25,6 @@ export const styles = StyleSheet.create({
   headerText: {
     color: colors.white,
     fontSize: fonts.fontSize['2xl'],
-    fontWeight: '500',
     textAlign: 'center',
     fontFamily: fonts.fontFamily.medium,
   },
@@ -45,6 +44,7 @@ export const styles = StyleSheet.create({
   },
   card: {
     padding: 16,
+    paddingBottom: 13,
     borderRadius: 12,
     backgroundColor: colors.white,
   },

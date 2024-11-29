@@ -6,24 +6,21 @@ import {
 import {colors, fonts} from '../../../res/themes';
 
 export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   header: {
+    alignItems: 'center',
+    paddingTop: hp(7),
     paddingHorizontal: wp(4),
-    paddingVertical: hp(2),
-    paddingBottom: hp(4),
-    position: 'relative',
+    paddingBottom: hp(5),
+    justifyContent: 'space-between',
+    flexDirection: 'row',
   },
   headerText: {
     color: colors.white,
     fontSize: fonts.fontSize['2xl'],
-    fontWeight: '500',
-    textAlign: 'center',
     fontFamily: fonts.fontFamily.medium,
-  },
-  backIcon: {
-    position: 'absolute',
-    left: wp(3),
-    top: hp(2.9),
-    zIndex: 1,
   },
   mainContainer: {
     flex: 1,
@@ -40,7 +37,6 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     color: colors.primaryBlack,
     fontSize: fonts.fontSize.large,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     lineHeight: 24,
   },

@@ -25,7 +25,6 @@ export const styles = StyleSheet.create({
   heading: {
     fontSize: fonts.fontSize['2xl'],
     textAlign: 'center',
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     lineHeight: 32,
     color: colors.primaryBlack,
@@ -34,7 +33,6 @@ export const styles = StyleSheet.create({
   closeButtonText: {
     color: colors.darkGray,
     fontSize: fonts.fontSize.xl,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     textAlign: 'center',
   },
@@ -47,7 +45,6 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     color: colors.primaryBlack,
     fontSize: fonts.fontSize.large,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     lineHeight: 24,
   },

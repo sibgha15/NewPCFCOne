@@ -3,6 +3,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {fonts} from '../../../../../res/themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -16,8 +17,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   heading: {
-    fontSize: 20,
-    fontWeight: '500',
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
   },
   serviceCardContainer: {
     paddingVertical: hp(1),
@@ -45,8 +46,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   serviceName: {
-    fontSize: 18,
-    fontWeight: '500',
+    fontSize: fonts.fontSize.large,
+    fontFamily: fonts.fontFamily.medium,
     color: '#1A1A1A',
   },
 });

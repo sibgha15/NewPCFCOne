@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {
-  SafeAreaView,
   StatusBar,
   Text,
   TouchableOpacity,
@@ -19,7 +18,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../../../res/themes';
-import MyTasksFilterModel from '../../components/Models/MyTasksModel';
+import PermissionModel from '../../components/Models/PermissionModel';
 
 const AttendanceScreen = () => {
   const navigation = useNavigation();
@@ -147,7 +146,7 @@ const AttendanceScreen = () => {
         visible={openModel}
         animationType="fade"
         onRequestClose={() => setOpenModel(false)}>
-        <MyTasksFilterModel onClose={() => setOpenModel(false)} />
+        <PermissionModel onClose={() => setOpenModel(false)} />
       </Modal>
     </View>
   );

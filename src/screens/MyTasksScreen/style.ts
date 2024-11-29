@@ -24,7 +24,6 @@ export const styles = StyleSheet.create({
   headerText: {
     color: colors.white,
     fontSize: fonts.fontSize['2xl'],
-    fontWeight: '500',
     textAlign: 'center',
     fontFamily: fonts.fontFamily.medium,
   },
@@ -44,7 +43,6 @@ export const styles = StyleSheet.create({
   tabButtonText: {
     color: colors.white,
     fontSize: fonts.fontSize.large,
-    fontWeight: '400',
     fontFamily: fonts.fontFamily.primary,
   },
   mainContainer: {
@@ -100,7 +98,6 @@ export const styles = StyleSheet.create({
   inProgressText: {
     fontSize: fonts.fontSize.small,
     color: '#D78B33',
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
   },
   isCompletetedBadge: {
@@ -112,7 +109,6 @@ export const styles = StyleSheet.create({
   isCompletetedText: {
     fontSize: fonts.fontSize.small,
     color: '#279457',
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
   },
   cardTitle: {
@@ -125,7 +121,6 @@ export const styles = StyleSheet.create({
   cardInfoText: {
     color: colors.darkGray,
     fontSize: fonts.fontSize.normal,
-    fontWeight: '400',
     fontFamily: fonts.fontFamily.primary,
   },
   userInfoContainer: {

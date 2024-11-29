@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   text: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: fonts.fontSize['2xl'],
+    fontFamily: fonts.fontFamily.bold,
   },
   bottomSheet: {
     height: Platform.OS === 'android' ? hp(60) : hp(57),
@@ -34,7 +34,6 @@ export const styles = StyleSheet.create({
     color: colors.primary,
     textAlign: 'center',
     fontSize: fonts.fontSize.large,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
   },
   logo: {

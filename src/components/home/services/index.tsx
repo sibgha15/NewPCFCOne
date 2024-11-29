@@ -17,6 +17,7 @@ import {
   Payroll,
   Teams,
 } from '../../../../res/assets/images/svgs';
+import {fonts} from '../../../../res/themes';
 
 const Services = ({navigation}: any) => {
   const services = [
@@ -186,7 +187,7 @@ const styles = StyleSheet.create({
     borderStyle: 'dashed',
   },
   serviceName: {
-    fontWeight: '400',
+    fontFamily: fonts.fontFamily.primary,
     fontSize: 15,
     color: '#1A1A1A',
     marginTop: hp(2),

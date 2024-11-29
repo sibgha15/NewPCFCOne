@@ -1,0 +1,107 @@
+import {Platform, StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import {colors, fonts} from '../../../../res/themes';
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.white,
+    paddingHorizontal: wp(4),
+    paddingTop: Platform.OS === 'ios' ? hp(6) : hp(2),
+    height: hp(100),
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    top: Platform.OS === 'ios' ? hp(6) : 0,
+    left: 0,
+    right: 0,
+    paddingHorizontal: wp(4),
+  },
+  closeText: {
+    fontSize: 17,
+    fontFamily: fonts.fontFamily.medium,
+    color: colors.black,
+  },
+  card: {
+    backgroundColor: colors.white,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 20,
+    elevation: 5,
+    width: '100%',
+  },
+  cardHeader: {
+    paddingHorizontal: wp(4),
+    paddingVertical: hp(2),
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  cardContent: {
+    paddingHorizontal: wp(4),
+    paddingVertical: hp(2),
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
+  },
+  name: {
+    fontSize: fonts.fontSize['3xl'],
+    color: colors.white,
+    fontFamily: fonts.fontFamily.primary,
+    lineHeight: 36,
+    paddingBottom: hp(5),
+    paddingTop: hp(1),
+  },
+  flexBetween: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: hp(1),
+  },
+  halfBox: {
+    width: wp(44),
+  },
+  label: {
+    fontSize: fonts.fontSize.small,
+    fontFamily: fonts.fontFamily.primary,
+    lineHeight: 18,
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+    color: colors.white,
+  },
+  info: {
+    fontSize: fonts.fontSize.normal,
+    fontFamily: fonts.fontFamily.primary,
+    lineHeight: 18,
+    letterSpacing: 0.5,
+    textTransform: 'capitalize',
+    color: colors.white,
+  },
+  qrCard: {
+    backgroundColor: colors.white,
+    borderRadius: 8,
+    width: 168,
+    height: 176,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 'auto',
+    marginTop: hp(4),
+  },
+});

@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {colors, fonts} from '../../../res/themes';
 import {
   widthPercentageToDP as wp,
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
     flex: 1,
-    paddingTop: hp(6),
+    paddingTop: Platform.OS === 'ios' ? hp(6) : 0,
   },
   subHeader: {
     flexDirection: 'row',

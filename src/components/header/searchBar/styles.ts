@@ -26,13 +26,13 @@ export const styles = StyleSheet.create({
 
   name: {
     fontSize: 20,
-    fontWeight: '500',
+    fontFamily: fonts.fontFamily.medium,
     color: colors.white,
   },
 
   designation: {
     fontSize: 16,
-    fontWeight: '400',
+    fontFamily: fonts.fontFamily.primary,
     color: colors.white,
   },
 
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     fontSize: 16,
-    color: '#000000',
+    color: colors.black,
     paddingHorizontal: wp(2),
   },
   icon: {

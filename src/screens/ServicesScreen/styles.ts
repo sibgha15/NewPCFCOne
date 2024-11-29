@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
   },
   subHeaderText: {
     fontSize: fonts.fontSize.xl,
-    fontWeight: '500',
     lineHeight: 26,
     fontFamily: fonts.fontFamily.medium,
     color: colors.primaryBlack,
@@ -48,14 +47,13 @@ export const styles = StyleSheet.create({
 
   name: {
     fontSize: fonts.fontSize.xl,
-    fontWeight: '500',
     color: colors.primaryBlack,
     fontFamily: fonts.fontFamily.medium,
   },
 
   designation: {
     fontSize: fonts.fontSize.normal,
-    fontWeight: '400',
+    fontFamily: fonts.fontFamily.primary,
     color: colors.primaryBlack,
   },
 
@@ -86,7 +84,6 @@ export const styles = StyleSheet.create({
   statusText: {
     color: colors.orange,
     fontSize: fonts.fontSize.small,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     textTransform: 'uppercase',
   },

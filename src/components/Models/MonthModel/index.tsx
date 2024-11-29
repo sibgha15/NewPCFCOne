@@ -28,7 +28,7 @@ const yearsRange = (start: any, end: any) => {
 };
 
 const MonthModel = ({onClose, onApply}: any) => {
-  const [isYearView, setIsYearView] = useState(true); // Start with year view
+  const [isYearView, setIsYearView] = useState(true);
   const [selectedMonth, setSelectedMonth] = useState('');
   const [selectedYear, setSelectedYear] = useState(
     new Date().getFullYear().toString(),
@@ -132,7 +132,11 @@ const MonthModel = ({onClose, onApply}: any) => {
           contentContainerStyle={styles.listContainer}
         />
 
-        <RoundedButton title="Apply" onPress={handleApply} />
+        <RoundedButton
+          title="Apply"
+          disabled={!selectedMonth || !selectedYear}
+          onPress={handleApply}
+        />
 
         <TouchableOpacity onPress={onClose}>
           <Text style={styles.closeButtonText}>Close</Text>

@@ -77,9 +77,59 @@ import Subscriptions from './subscriptions.svg';
 import InfoIcon from './info_i.svg';
 import MoreInfo from './more_info.svg';
 import CalendarClockIcon from './calendar_clock.svg';
+import EmojiIcon from './add_reaction.svg';
+import AttachFileIcon from './attach_file.svg';
+import SendIcon from './send.svg';
+import GuideBookIcon from './primaryguidebook.svg';
+import NeutralFaceIcon from './neutralFace.svg';
+import SatisfyFaceIcon from './satisfiedFace.svg';
+import DisSatisfyFaceIcon from './dissatisfiedFace.svg';
+import CheckRadioIcon from './checkRadio.svg';
+import UnCheckRadioIcon from './uncheckRadio.svg';
+import ExpandMoreIcon from './expand_more.svg';
+import ApproveIcon from './approve.svg';
+import RejectIcon from './reject.svg';
+import CallIcon from './call.svg';
+import ChatBubble from './chat_bubble.svg';
+import MailIcon from './mail.svg';
+import EditIcon from './edit.svg';
+import BlackLogo from './PCFC.svg';
+import GoDIcon from './GoD.svg';
+import QRCode from './QRCODE.svg';
+import AppleWalletIcon from './appleWallet.svg';
+import ShowLess from './showLess.svg';
+import ShowMenu from './showMenu.svg';
+import News from './news.svg';
+import Publications from './Publications.svg';
+import Promotions from './Promotions.svg';
 
 export {
   UserAccount,
+  ShowMenu,
+  Publications,
+  EditIcon,
+  Promotions,
+  News,
+  ShowLess,
+  QRCode,
+  AppleWalletIcon,
+  BlackLogo,
+  GoDIcon,
+  MailIcon,
+  EmojiIcon,
+  ChatBubble,
+  CallIcon,
+  RejectIcon,
+  ApproveIcon,
+  GuideBookIcon,
+  ExpandMoreIcon,
+  CheckRadioIcon,
+  UnCheckRadioIcon,
+  NeutralFaceIcon,
+  SatisfyFaceIcon,
+  DisSatisfyFaceIcon,
+  AttachFileIcon,
+  SendIcon,
   CalendarClockIcon,
   ImageIcon,
   MoreInfo,

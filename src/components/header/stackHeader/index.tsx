@@ -18,30 +18,24 @@ const StackHeader = ({title, backgroundColor}: StackHeaderProps) => {
 
   return (
     <View style={[styles.header, {backgroundColor: backgroundColor}]}>
-      <TouchableOpacity
-        style={styles.backIconContainer}
-        onPress={() => navigation.goBack()}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <ArrowIconLeft width={24} height={24} />
       </TouchableOpacity>
       <Text style={styles.headerText}>{title}</Text>
+      <View style={{width: 20}}></View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   header: {
-    position: 'relative',
+    flexDirection: 'row',
     paddingVertical: hp(2),
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-  backIconContainer: {
-    position: 'absolute',
-    left: 10,
-    padding: 10,
+    justifyContent: 'space-between',
+    paddingHorizontal: wp(4),
   },
   headerText: {
-    textAlign: 'center',
     fontSize: fonts.fontSize['2xl'],
     fontFamily: fonts.fontFamily.medium,
   },

@@ -26,6 +26,12 @@ import PayrollScreen from '../../src/screens/PayrollScreen';
 import TaskScreen from '../../src/screens/MyTasksScreen';
 import CircularsScreen from '../../src/screens/CircularsScreen';
 import AttendanceScreen from '../../src/screens/AttendenceScreen';
+import {fonts} from '../../res/themes';
+import PermissionScreen from '../../src/screens/PermissionScreen';
+import EditPermissionScreen from '../../src/screens/EditPermissionScreen/Index';
+import MediaCenterScreen from '../../src/screens/MediaCenterScreen';
+import NewsScreen from '../../src/screens/NewsScreen';
+import NewsDetailScreen from '../../src/screens/NewsDetailScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 function HomeStack() {
@@ -38,6 +44,14 @@ function HomeStack() {
       <Stack.Screen name="taskScreen" component={TaskScreen} />
       <Stack.Screen name="circularsScreen" component={CircularsScreen} />
       <Stack.Screen name="AttendanceScreen" component={AttendanceScreen} />
+      <Stack.Screen name="PermissionScreen" component={PermissionScreen} />
+      <Stack.Screen
+        name="EditPermissionScreen"
+        component={EditPermissionScreen}
+      />
+      <Stack.Screen name="MediaCenterScreen" component={MediaCenterScreen} />
+      <Stack.Screen name="NewsScreen" component={NewsScreen} />
+      <Stack.Screen name="NewsDetailScreen" component={NewsDetailScreen} />
     </Stack.Navigator>
   );
 }
@@ -50,7 +64,8 @@ export default function TabNavigator() {
           backgroundColor: '#F5F7FC',
           paddingBottom: 30,
           paddingTop: 15,
-          height: 100,
+          height: route.name === 'PCFC AI' ? 0 : 100,
+          display: route.name === 'PCFC AI' ? 'none' : 'flex',
         },
         tabBarIcon: ({focused}) => {
           let IconComponent;
@@ -71,7 +86,10 @@ export default function TabNavigator() {
         },
         tabBarActiveTintColor: '#177DB7',
         tabBarInactiveTintColor: '#7F7F7F',
-        tabBarLabelStyle: {fontSize: 16, fontWeight: '400'},
+        tabBarLabelStyle: {
+          fontSize: fonts.fontSize.medium,
+          fontFamily: fonts.fontFamily.primary,
+        },
       })}>
       <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Services" component={ServicesScreen} />

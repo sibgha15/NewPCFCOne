@@ -3,6 +3,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {colors, fonts} from '../../../../res/themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -24,16 +25,15 @@ export const styles = StyleSheet.create({
   },
 
   name: {
-    fontSize: 20,
-    fontWeight: '500',
-    color: '#ffffff',
-    fontFamily: 'Dubai-Bold',
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
+    color: colors.white,
   },
 
   designation: {
-    fontSize: 16,
-    fontWeight: '400',
-    color: '#ffffff',
+    fontSize: fonts.fontSize.medium,
+    fontFamily: fonts.fontFamily.primary,
+    color: colors.white,
   },
 
   scanQRContainer: {

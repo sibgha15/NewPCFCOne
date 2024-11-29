@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {Text, View, TouchableOpacity, Switch, Modal} from 'react-native';
 import RoundedButton from '../../common/roundedButton';
 import {PrimaryCalender} from '../../../../res/assets/images/svgs';
-import CalenderModel from '../CalenderModel';
 import {styles} from './style';
+import RangeCalenderModel from '../RangeCalenderModel';
 
 const CirculatesModel = ({onClose}: any) => {
   const [openModel, setOpenModel] = useState(false);
@@ -34,9 +34,7 @@ const CirculatesModel = ({onClose}: any) => {
               Start Date
             </Text>
             <View style={styles.dateInputContainer}>
-              <Text style={styles.dateText}>
-                {startDate || 'Select Start Date'}
-              </Text>
+              <Text style={styles.dateText}>{startDate || ''}</Text>
               <TouchableOpacity
                 onPress={() => {
                   setIsStartDate(true);
@@ -52,9 +50,7 @@ const CirculatesModel = ({onClose}: any) => {
               End Date
             </Text>
             <View style={styles.dateInputContainer}>
-              <Text style={styles.dateText}>
-                {endDate || 'Select End Date'}
-              </Text>
+              <Text style={styles.dateText}>{endDate || ''}</Text>
               <TouchableOpacity
                 onPress={() => {
                   setIsStartDate(false);
@@ -78,7 +74,7 @@ const CirculatesModel = ({onClose}: any) => {
         visible={openModel}
         animationType="fade"
         onRequestClose={() => setOpenModel(false)}>
-        <CalenderModel
+        <RangeCalenderModel
           onClose={() => setOpenModel(false)}
           onSelectDate={handleDateSelection}
         />

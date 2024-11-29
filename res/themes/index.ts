@@ -15,6 +15,7 @@ export const colors = {
   red: '#E13D17',
   lightOrange: '#FFB35B1A',
   orange: '#D78B33',
+  alert: '#FC493D',
 };
 
 export const fonts = {
@@ -25,6 +26,7 @@ export const fonts = {
     large: 18,
     xl: 20,
     '2xl': 24,
+    '3xl': 28,
   },
   fontWeight: {
     regular: '400',

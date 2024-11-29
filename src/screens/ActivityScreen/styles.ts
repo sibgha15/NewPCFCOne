@@ -21,7 +21,6 @@ export const styles = StyleSheet.create({
   headerText: {
     color: colors.primaryBlack,
     fontSize: fonts.fontSize['2xl'],
-    fontWeight: '500',
     textAlign: 'center',
     fontFamily: fonts.fontFamily.medium,
   },

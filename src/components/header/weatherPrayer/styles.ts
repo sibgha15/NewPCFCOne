@@ -3,6 +3,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {colors, fonts} from '../../../../res/themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -25,31 +26,31 @@ export const styles = StyleSheet.create({
   },
 
   temperatureText: {
-    fontSize: 20,
-    fontWeight: '500',
-    color: '#ffffff',
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
+    color: colors.white,
     textAlign: 'center',
   },
 
   weatherText: {
-    fontSize: 14,
-    fontWeight: '400',
-    color: '#ffffff',
+    fontSize: fonts.fontSize.normal,
+    color: colors.white,
+    fontFamily: fonts.fontFamily.primary,
     marginLeft: wp(1),
     textAlign: 'center',
   },
 
   prayerTimeText: {
-    fontSize: 20,
-    fontWeight: '500',
-    color: '#ffffff',
+    fontSize: fonts.fontSize.xl,
+    fontFamily: fonts.fontFamily.medium,
+    color: colors.white,
     textAlign: 'center',
   },
 
   prayerText: {
     fontSize: 14,
-    fontWeight: '400',
-    color: '#ffffff',
+    color: colors.white,
+    fontFamily: fonts.fontFamily.primary,
     marginLeft: wp(1),
     textAlign: 'center',
   },

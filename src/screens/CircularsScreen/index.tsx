@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {
   Modal,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   Text,
@@ -17,7 +16,6 @@ import {
 } from '../../../res/assets/images/svgs';
 import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
-import CalenderModel from '../../components/Models/CalenderModel';
 import CirculatesModel from '../../components/Models/CircularModel';
 
 const circularsData = [

@@ -17,7 +17,6 @@ import {
   Info,
   Language,
   Logout,
-  ScanQR,
   Sheild,
   StarOutline,
   Support,
@@ -46,15 +45,19 @@ const MenuScreen = () => {
             </View>
           </View>
 
-          <View style={styles.scanQRContainer}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('digitalCardScreen')}
+            style={styles.scanQRContainer}>
             <BlueQR height={28} width={28} />
-          </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.mainContainer}>
           <Text style={[styles.name, {paddingBottom: 5}]}>Account</Text>
           <View style={styles.cardContainer}>
-            <TouchableOpacity style={styles.cardItem}>
+            <TouchableOpacity
+              style={styles.cardItem}
+              onPress={() => navigation.navigate('profileScreen')}>
               <UserAccount width={22.17} height={22.17} />
               <Text style={styles.cardItemText}>Personal Information</Text>
             </TouchableOpacity>
@@ -99,12 +102,16 @@ const MenuScreen = () => {
             Information
           </Text>
           <View style={styles.cardContainer}>
-            <TouchableOpacity style={styles.cardItem}>
+            <TouchableOpacity
+              style={styles.cardItem}
+              onPress={() => navigation.navigate('aboutScreen')}>
               <Info width={22.17} height={22.17} />
               <Text style={styles.cardItemText}>About PCFC One v0.1</Text>
             </TouchableOpacity>
             <View style={styles.separator}></View>
-            <TouchableOpacity style={styles.cardItem}>
+            <TouchableOpacity
+              style={styles.cardItem}
+              onPress={() => navigation.navigate('userGuideScreen')}>
               <GuideBook width={22.17} height={22.17} />
               <Text style={styles.cardItemText}>User Guide</Text>
             </TouchableOpacity>
@@ -114,12 +121,16 @@ const MenuScreen = () => {
               <Text style={styles.cardItemText}>Service Desk</Text>
             </TouchableOpacity>
             <View style={styles.separator}></View>
-            <TouchableOpacity style={styles.cardItem}>
+            <TouchableOpacity
+              style={styles.cardItem}
+              onPress={() => navigation.navigate('feedbackScreen')}>
               <Chat width={22.17} height={22.17} />
               <Text style={styles.cardItemText}>Feedback</Text>
             </TouchableOpacity>
             <View style={styles.separator}></View>
-            <TouchableOpacity style={styles.cardItem}>
+            <TouchableOpacity
+              style={styles.cardItem}
+              onPress={() => navigation.navigate('privacyPolicyScreen')}>
               <Sheild width={22.17} height={22.17} />
               <Text style={styles.cardItemText}>Privacy Policy</Text>
             </TouchableOpacity>

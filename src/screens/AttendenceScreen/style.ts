@@ -24,7 +24,6 @@ export const styles = StyleSheet.create({
   headerText: {
     color: colors.white,
     fontSize: fonts.fontSize['2xl'],
-    fontWeight: '500',
     textAlign: 'center',
     fontFamily: fonts.fontFamily.medium,
   },
@@ -44,7 +43,6 @@ export const styles = StyleSheet.create({
   tabButtonText: {
     color: colors.white,
     fontSize: fonts.fontSize.large,
-    fontWeight: '400',
     fontFamily: fonts.fontFamily.primary,
   },
   mainContainer: {

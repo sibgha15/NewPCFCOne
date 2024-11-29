@@ -32,29 +32,26 @@ const PayrollScreen = () => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <View style={styles.container}>
       <LinearGradient
         colors={['#1881BB', '#20AAE2']}
         start={{x: 0, y: 0}}
         end={{x: 0, y: 1}}>
         <View style={styles.header}>
-          <TouchableOpacity
-            style={styles.backIcon}
-            onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <WhiteArrowIconLeft />
           </TouchableOpacity>
           <Text style={styles.headerText}>Payroll</Text>
+          <View style={{width: 20}}></View>
         </View>
       </LinearGradient>
       <View style={styles.mainContainer}>
         <View>
           <Text style={[styles.sectionTitle, {marginBottom: 4}]}>
-            Start Date
+            Start Month
           </Text>
           <View style={styles.dateInputContainer}>
-            <Text style={styles.dateText}>
-              {startDate || 'Select Start Date'}
-            </Text>
+            <Text style={styles.dateText}>{startDate || ''}</Text>
             <TouchableOpacity
               onPress={() => {
                 setIsStartDate(true);
@@ -64,9 +61,11 @@ const PayrollScreen = () => {
             </TouchableOpacity>
           </View>
 
-          <Text style={[styles.sectionTitle, {marginBottom: 4}]}>End Date</Text>
+          <Text style={[styles.sectionTitle, {marginBottom: 4}]}>
+            End Month
+          </Text>
           <View style={styles.dateInputContainer}>
-            <Text style={styles.dateText}>{endDate || 'Select End Date'}</Text>
+            <Text style={styles.dateText}>{endDate || ''}</Text>
             <TouchableOpacity
               onPress={() => {
                 setIsStartDate(false);
@@ -96,7 +95,7 @@ const PayrollScreen = () => {
           onApply={handleDateApply}
         />
       </Modal>
-    </SafeAreaView>
+    </View>
   );
 };
 

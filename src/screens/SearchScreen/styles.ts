@@ -26,7 +26,6 @@ export const styles = StyleSheet.create({
     fontSize: fonts.fontSize.medium,
     lineHeight: 22,
     letterSpacing: 0.1,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     paddingBottom: hp(1),
   },
@@ -47,7 +46,6 @@ export const styles = StyleSheet.create({
   suggestionText: {
     color: colors.primaryBlack,
     fontSize: fonts.fontSize.large,
-    fontWeight: '400',
     fontFamily: fonts.fontFamily.primary,
     letterSpacing: 0.5,
   },

@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: colors.white,
     fontSize: fonts.fontSize.xl,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
   },
 });

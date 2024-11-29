@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 18,
-    fontWeight: '500',
     fontFamily: fonts.fontFamily.medium,
     color: colors.black,
     paddingBottom: 4,
