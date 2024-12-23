@@ -17,11 +17,11 @@ export const styles = StyleSheet.create({
     paddingTop: hp(3),
     paddingHorizontal: wp(4),
     paddingBottom: hp(2),
-    height: hp(90),
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
+    // height: hp(95),
   },
   QRCard: {
     backgroundColor: colors.white,
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp(4),
     paddingVertical: hp(2),
     borderRadius: 8,
-    marginBottom: hp(25),
+    marginBottom: hp(18),
   },
   footer: {
     position: 'absolute',

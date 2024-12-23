@@ -47,6 +47,8 @@ export const styles = StyleSheet.create({
     shadowRadius: 20,
     elevation: 5,
     width: '100%',
+    borderWidth: 1,
+    borderColor: '#DEE3EA',
   },
   cardHeader: {
     paddingHorizontal: wp(4),

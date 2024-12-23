@@ -8,7 +8,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
 import RoundedButton from '../../components/common/roundedButton';
-import MonthModel from '../../components/Models/MonthModel';
+import MonthAndYearModel from '../../components/Models/MonthModel';
 
 const PayrollScreen = () => {
   const navigation = useNavigation();
@@ -90,7 +90,7 @@ const PayrollScreen = () => {
         visible={openModel}
         animationType="fade"
         onRequestClose={() => setOpenModel(false)}>
-        <MonthModel
+        <MonthAndYearModel
           onClose={() => setOpenModel(false)}
           onApply={handleDateApply}
         />

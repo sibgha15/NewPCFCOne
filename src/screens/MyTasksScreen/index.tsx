@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {
-  SafeAreaView,
   StatusBar,
   Text,
   TouchableOpacity,
@@ -21,12 +20,14 @@ import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../../../res/themes';
 import MyTasksFilterModel from '../../components/Models/MyTasksModel';
+import UserPublicProfileModel from '../../components/Models/UserPublicProfile';
 
 const TaskScreen = () => {
   const navigation = useNavigation();
 
   const [activeTab, setActiveTab] = useState('Pending');
   const [openModel, setOpenModel] = useState(false);
+  const [openProfileModel, setOpenProfileModel] = useState(false);
 
   const pendingTasks = [
     {
@@ -132,7 +133,10 @@ const TaskScreen = () => {
           <Text style={styles.cardInfoText}>{task.code}</Text>
           <View style={styles.userInfoContainer}>
             <Text style={styles.cardInfoText}>Initiated by</Text>
-            <UserAvatar height={32} width={32} />
+            <TouchableOpacity
+              onPress={() => setOpenProfileModel(!openProfileModel)}>
+              <UserAvatar height={32} width={32} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -223,6 +227,13 @@ const TaskScreen = () => {
         animationType="fade"
         onRequestClose={() => setOpenModel(false)}>
         <MyTasksFilterModel onClose={() => setOpenModel(false)} />
+      </Modal>
+      <Modal
+        transparent={true}
+        visible={openProfileModel}
+        animationType="fade"
+        onRequestClose={() => setOpenProfileModel(false)}>
+        <UserPublicProfileModel onClose={() => setOpenProfileModel(false)} />
       </Modal>
     </View>
   );

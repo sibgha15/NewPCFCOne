@@ -74,8 +74,10 @@ const ProfileScreen = () => {
           <Text style={styles.title}>Personal Information</Text>
           <Text style={styles.subTitle}>Department</Text>
           <Text style={styles.info}>Information Technology</Text>
+          <View style={styles.divider}></View>
           <Text style={styles.subTitle}>Mobile Phone</Text>
           <Text style={styles.info}>+971 000 1234567</Text>
+          <View style={styles.divider}></View>
           <Text style={styles.subTitle}>Work Email</Text>
           <Text style={[styles.info, {paddingBottom: 0}]}>
             muhammadaliabdullah@gmail.com
@@ -88,12 +90,17 @@ const ProfileScreen = () => {
             Department. I have experience of more than 20 years in this field.
           </Text>
         </View>
-        <RoundedButton
-          title="Edit Profile"
-          buttonStyle={{marginTop: 0, marginBottom: hp(8)}}
-          onPress={() => setOpenModel(true)}
-        />
       </ScrollView>
+      <RoundedButton
+        title="Edit Profile"
+        buttonStyle={{
+          marginTop: hp(2),
+          marginBottom: hp(4),
+          width: wp(93),
+          alignSelf: 'center',
+        }}
+        onPress={() => setOpenModel(true)}
+      />
       <Modal
         transparent={true}
         visible={openModel}

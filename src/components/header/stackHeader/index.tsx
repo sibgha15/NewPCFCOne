@@ -30,7 +30,7 @@ const StackHeader = ({title, backgroundColor}: StackHeaderProps) => {
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    paddingVertical: hp(2),
+    paddingVertical: hp(1.5),
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: wp(4),

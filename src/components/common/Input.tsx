@@ -36,7 +36,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         <TextInput
           style={[styles.input, inputStyle]}
           secureTextEntry={isPassword && !isPasswordVisible}
-          onFocus={props.onFocus} // Call onFocus when input is focused
+          onFocus={props.onFocus}
           {...props}
         />
         {isPassword && (

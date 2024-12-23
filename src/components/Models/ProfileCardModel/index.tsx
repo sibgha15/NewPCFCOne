@@ -1,12 +1,7 @@
-import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import React, {useState} from 'react';
+import {Text, TouchableOpacity, View} from 'react-native';
 import {styles} from './style';
-import {
-  BlackLogo,
-  GoDIcon,
-  QRCode,
-  ShowMenu,
-} from '../../../../res/assets/images/svgs';
+import {BlackLogo, GoDIcon, QRCode} from '../../../../res/assets/images/svgs';
 import LinearGradient from 'react-native-linear-gradient';
 
 const ProfileCardModel = ({onClose}: any) => {
@@ -16,7 +11,6 @@ const ProfileCardModel = ({onClose}: any) => {
         <TouchableOpacity onPress={() => onClose()}>
           <Text style={styles.closeText}>Done</Text>
         </TouchableOpacity>
-        <ShowMenu />
       </View>
       <View style={styles.card}>
         <View style={styles.cardHeader}>

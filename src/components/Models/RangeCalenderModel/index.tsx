@@ -6,7 +6,7 @@ import {Calendar} from 'react-native-calendars';
 import {format, isBefore} from 'date-fns';
 import {colors} from '../../../../res/themes';
 
-const RangeCalenderModel = ({onClose, onSelectDateRange}: any) => {
+const RangeCalenderModel = ({onClose, onSelectDate}: any) => {
   const [startDate, setStartDate] = useState<string | null>(null);
   const [endDate, setEndDate] = useState<string | null>(null);
 
@@ -28,7 +28,8 @@ const RangeCalenderModel = ({onClose, onSelectDateRange}: any) => {
 
   const handleApply = () => {
     if (startDate && endDate) {
-      onSelectDateRange({startDate, endDate});
+      onSelectDate({startDate, endDate});
+      onClose();
     }
   };
 
@@ -87,24 +88,14 @@ const RangeCalenderModel = ({onClose, onSelectDateRange}: any) => {
             theme={{
               backgroundColor: '#ffffff',
               calendarBackground: '#ffffff',
-              textSectionTitleColor: '#b6c1cd',
               todayTextColor: colors.primary,
               dayTextColor: '#2d4150',
               textDisabledColor: colors.lightGrey,
               arrowColor: '#000000',
               monthTextColor: '#000000',
-              dotColor: '#177DB7',
-              selectedDayBackgroundColor: '#177DB7',
-              selectedDayTextColor: '#ffffff',
-              textDayFontWeight: '500',
-              textMonthFontWeight: 'bold',
-              textDayHeaderFontWeight: '500',
               textDayFontSize: 16,
-              textMonthFontSize: 16,
-              textDayHeaderFontSize: 14,
             }}
             hideExtraDays={true}
-            disableAllTouchEventsForDisabledDays={true}
           />
         </View>
 

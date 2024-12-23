@@ -7,6 +7,7 @@ import {colors, fonts} from '../../../res/themes';
 
 export const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: colors.background,
   },
   flexView: {
@@ -78,6 +79,19 @@ export const styles = StyleSheet.create({
     fontFamily: fonts.fontFamily.primary,
     marginLeft: wp(4),
     letterSpacing: 0.4,
+  },
+
+  socialText: {
+    color: colors.primaryBlack,
+    fontSize: fonts.fontSize.medium,
+    fontFamily: fonts.fontFamily.primary,
+    marginLeft: wp(4),
+    letterSpacing: 0.5,
+  },
+
+  socialContainer: {
+    marginHorizontal: 'auto',
+    width: wp(65),
   },
 
   separator: {

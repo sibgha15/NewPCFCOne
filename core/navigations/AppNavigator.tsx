@@ -3,7 +3,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import TabNavigator from './TabNavigator';
 import {createStackNavigator} from '@react-navigation/stack';
 import OnBoardingStack from './OnboardingStack';
-import {StatusBar} from 'react-native';
 const Stack = createStackNavigator();
 
 export default function AppNavigator() {

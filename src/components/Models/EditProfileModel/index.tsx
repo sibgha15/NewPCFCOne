@@ -5,8 +5,8 @@ import {
   View,
   ScrollView,
   TextInput,
+  Modal,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 import {styles} from './style';
 import {
   CallIcon,
@@ -16,10 +16,26 @@ import {
   UserAvatar,
 } from '../../../../res/assets/images/svgs';
 import RoundedButton from '../../common/roundedButton';
-
+import SuccessModel from '../SuccessModel';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 const EditProfileModel = ({onClose}: any) => {
+  const [openModel, setOpenModel] = useState(false);
+
+  const handleSaveChanges = () => {
+    setOpenModel(true);
+
+    setTimeout(() => {
+      setOpenModel(false);
+
+      onClose();
+    }, 2000);
+  };
+
   return (
-    <View style={styles.container}>
+    <View style={{flex: 1}}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={styles.mainContainer}>
@@ -48,8 +64,10 @@ const EditProfileModel = ({onClose}: any) => {
           <Text style={styles.title}>Personal Information</Text>
           <Text style={styles.subTitle}>Department</Text>
           <Text style={styles.info}>Information Technology</Text>
+          <View style={styles.divider}></View>
           <Text style={styles.subTitle}>Mobile Phone</Text>
           <Text style={styles.info}>+971 000 1234567</Text>
+          <View style={styles.divider}></View>
           <Text style={styles.subTitle}>Work Email</Text>
           <Text style={[styles.info, {paddingBottom: 0}]}>
             muhammadaliabdullah@gmail.com
@@ -62,12 +80,29 @@ const EditProfileModel = ({onClose}: any) => {
             value="I’m Mohammed Ali Abdullah and I’m Head of Information Technology Department. I have experience of more than 20 years in this field."
             multiline={true}></TextInput>
         </View>
-        <RoundedButton
-          onPress={() => onClose()}
-          title="Save Changes"
-          buttonStyle={{marginTop: 0}}
-        />
       </ScrollView>
+      <RoundedButton
+        onPress={handleSaveChanges}
+        title="Save Changes"
+        buttonStyle={{
+          marginTop: hp(90),
+          marginBottom: hp(4),
+          width: wp(93),
+          alignSelf: 'center',
+        }}
+      />
+      <Modal
+        transparent={true}
+        visible={openModel}
+        animationType="fade"
+        onRequestClose={() => setOpenModel(false)}>
+        <SuccessModel
+          title="Changes Saved!"
+          message="You have successfully updatedyour profile."
+          buttonText="Go back to Homepage"
+          onClose={() => setOpenModel(false)}
+        />
+      </Modal>
     </View>
   );
 };

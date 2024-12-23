@@ -4,22 +4,22 @@ import RoundedButton from '../../common/roundedButton';
 import {PrimaryCalender} from '../../../../res/assets/images/svgs';
 import {styles} from './style';
 import RangeCalenderModel from '../RangeCalenderModel';
+import {format, isBefore} from 'date-fns';
 
 const CirculatesModel = ({onClose}: any) => {
   const [openModel, setOpenModel] = useState(false);
-  const [isDateEnabled, setIsDateEnabled] = useState(false);
-  const [isDepartmentEnabled, setIsDepartmentEnabled] = useState(false);
-
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [isStartDate, setIsStartDate] = useState(true);
 
-  const handleDateSelection = (date: string) => {
-    if (isStartDate) {
-      setStartDate(date);
-    } else {
-      setEndDate(date);
-    }
+  const handleDateSelection = ({
+    startDate,
+    endDate,
+  }: {
+    startDate: string;
+    endDate: string;
+  }) => {
+    setStartDate(startDate);
+    setEndDate(endDate);
     setOpenModel(false);
   };
 
@@ -37,7 +37,6 @@ const CirculatesModel = ({onClose}: any) => {
               <Text style={styles.dateText}>{startDate || ''}</Text>
               <TouchableOpacity
                 onPress={() => {
-                  setIsStartDate(true);
                   setOpenModel(true);
                 }}>
                 <PrimaryCalender />
@@ -53,7 +52,6 @@ const CirculatesModel = ({onClose}: any) => {
               <Text style={styles.dateText}>{endDate || ''}</Text>
               <TouchableOpacity
                 onPress={() => {
-                  setIsStartDate(false);
                   setOpenModel(true);
                 }}>
                 <PrimaryCalender />

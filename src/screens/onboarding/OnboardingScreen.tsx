@@ -14,16 +14,20 @@ import {
   Task,
 } from '../../../res/assets/images/svgs';
 import LinearGradient from 'react-native-linear-gradient';
-import {colors} from '../../../res/themes';
-
+import {useTheme} from '../../../res/themes/ThemeContext';
+import {useFontSize} from '../../../res/themes/FontSizeContext';
+import fontSizes from '../../../res/themes/fonts';
 import {CommonActions} from '@react-navigation/native';
 import {styles} from './Styles';
-
 const {width: screenWidth} = Dimensions.get('window');
 
 const SliderScreen = ({navigation}: any) => {
   const carouselRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const {theme, toggleTheme, isDarkMode} = useTheme();
+  const {fontSize} = useFontSize();
+  const fonts = fontSizes[fontSize];
+
   const handleContinue = () => {
     if (activeSlide < slides.length - 1) {
       // Move to the next slide
@@ -66,7 +70,7 @@ const SliderScreen = ({navigation}: any) => {
 
   const renderItem = ({item, index}: any) => (
     <LinearGradient
-      colors={[colors.white, colors.background, colors.skyblue]}
+      colors={[theme.white, theme.background, theme.skyblue]}
       style={styles.slide}>
       <TouchableOpacity
         style={styles.introButton}
@@ -91,9 +95,9 @@ const SliderScreen = ({navigation}: any) => {
             <LinearGradient
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
-              colors={[colors.skyblue, colors.darkBlue]}
+              colors={[theme.skyblue, theme.darkBlue]}
               style={styles.bottomButtonwithoutBorder}>
-              <Text style={[styles.buttontext, {color: colors.white}]}>
+              <Text style={[styles.buttontext, {color: theme.white}]}>
                 Get Started
               </Text>
             </LinearGradient>

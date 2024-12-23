@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {colors, fonts} from '../../../res/themes';
 import {
   widthPercentageToDP as wp,
@@ -8,7 +8,8 @@ import {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
+    paddingTop: Platform.OS === 'ios' ? hp(5) : hp(0),
   },
   header: {
     flexDirection: 'row',
@@ -16,6 +17,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: wp(4),
     paddingVertical: hp(2),
+    paddingBottom: hp(1),
     backgroundColor: colors.white,
   },
   headerText: {
@@ -78,7 +80,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
     flex: 1,
     paddingVertical: hp(2),
-    paddingBottom: hp(8),
+    paddingBottom: hp(10),
   },
   notificationCard: {
     paddingVertical: 12,

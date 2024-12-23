@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Text, View, TouchableOpacity, FlatList} from 'react-native';
-import {styles} from './style';
 import RoundedButton from '../../common/roundedButton';
 import {LeftArrow, RightArrow} from '../../../../res/assets/images/svgs';
+import {styles} from './style';
 
 const months = [
   'JAN',
@@ -27,7 +27,7 @@ const yearsRange = (start: any, end: any) => {
   return years;
 };
 
-const MonthModel = ({onClose, onApply}: any) => {
+const MonthAndYearModel = ({onClose, onApply}: any) => {
   const [isYearView, setIsYearView] = useState(true);
   const [selectedMonth, setSelectedMonth] = useState('');
   const [selectedYear, setSelectedYear] = useState(
@@ -146,4 +146,4 @@ const MonthModel = ({onClose, onApply}: any) => {
   );
 };
 
-export default MonthModel;
+export default MonthAndYearModel;

@@ -28,6 +28,7 @@ import Neuron from './neuron.svg';
 import Esaad from './esaad.svg';
 import Fazaa from './fazaa.svg';
 import Add from './add.svg';
+import AddIcon from './addIcon.svg';
 import SplashLogo from './splashLogo.svg';
 import Onboarding from './onboarding.svg';
 import AttendanceOnboarding from './attend.svg';
@@ -96,18 +97,60 @@ import EditIcon from './edit.svg';
 import BlackLogo from './PCFC.svg';
 import GoDIcon from './GoD.svg';
 import QRCode from './QRCODE.svg';
-import AppleWalletIcon from './appleWallet.svg';
 import ShowLess from './showLess.svg';
 import ShowMenu from './showMenu.svg';
 import News from './news.svg';
 import Publications from './Publications.svg';
 import Promotions from './Promotions.svg';
+import LaptopChromeBook from './laptop_chromebook.svg';
+import SentimentSatisfied from './sentiment_satisfied.svg';
+import Widgets from './widgets.svg';
+import Balance from './balance.svg';
+import Security from './security.svg';
+import ChessIcon from './chess.svg';
+import ShieldPerson from './shield_person.svg';
+import PCFCIcon from './PCFCIcon.svg';
+import AppleWalletIcon from './appleWalletIcon.svg';
+import AppleWalletText from './appleWalletText.svg';
+import Docs from './docs.svg';
+import HandShakeIcon from './handshakeIcon.svg';
+import Facebook from './facebook.svg';
+import Instagram from './instagram.svg';
+import Twitter from './twitter.svg';
+import WhiteAddIcon from './whiteAddIcon.svg';
+import WhiteCalender from './whiteCalendar.svg';
+import HistoryClock from './history.svg';
+import GrayInfoIcon from './grayInfoIcon.svg';
+import StarIcon from './star.svg';
+import GoldenStar from './goldenStar.svg';
+import HotelClassIcon from './hotel_class.svg';
 
 export {
   UserAccount,
+  AppleWalletText,
+  Docs,
+  HotelClassIcon,
+  GoldenStar,
+  WhiteAddIcon,
+  StarIcon,
+  HistoryClock,
+  GrayInfoIcon,
+  Facebook,
+  WhiteCalender,
+  Instagram,
+  Twitter,
+  Security,
+  HandShakeIcon,
+  ShieldPerson,
+  PCFCIcon,
   ShowMenu,
+  ChessIcon,
+  Balance,
+  SentimentSatisfied,
+  Widgets,
   Publications,
   EditIcon,
+  LaptopChromeBook,
   Promotions,
   News,
   ShowLess,
@@ -131,6 +174,7 @@ export {
   AttachFileIcon,
   SendIcon,
   CalendarClockIcon,
+  AddIcon,
   ImageIcon,
   MoreInfo,
   Subscriptions,

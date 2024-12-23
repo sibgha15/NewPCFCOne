@@ -1,19 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StatusBar,
   Text,
   TouchableOpacity,
   View,
   ScrollView,
+  Modal,
 } from 'react-native';
-import {WhiteArrowIconLeft} from '../../../res/assets/images/svgs';
+import {
+  WhiteArrowIconLeft,
+  WhiteFilterIcon,
+} from '../../../res/assets/images/svgs';
 import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {styles} from './styles';
 import MediaCard from '../../components/common/MediaCard';
+import DateFilterModel from '../../components/Models/DateFilterModel';
 
 const NewsScreen: React.FC = () => {
   const navigation = useNavigation();
+  const [openModel, setOpenModel] = useState(false);
 
   const newsData = [
     {
@@ -68,7 +74,9 @@ const NewsScreen: React.FC = () => {
             <WhiteArrowIconLeft />
           </TouchableOpacity>
           <Text style={styles.headerText}>News</Text>
-          <View style={{width: 20}}></View>
+          <TouchableOpacity onPress={() => setOpenModel(true)}>
+            <WhiteFilterIcon />
+          </TouchableOpacity>
         </View>
       </LinearGradient>
       <ScrollView
@@ -86,6 +94,14 @@ const NewsScreen: React.FC = () => {
           ))}
         </View>
       </ScrollView>
+
+      <Modal
+        transparent={true}
+        visible={openModel}
+        animationType="fade"
+        onRequestClose={() => setOpenModel(false)}>
+        <DateFilterModel onClose={() => setOpenModel(false)} />
+      </Modal>
     </View>
   );
 };

@@ -1,4 +1,4 @@
-import React, {cloneElement} from 'react';
+import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Check, UnCheck} from '../../../res/assets/images/svgs';
 import {Text} from 'react-native';

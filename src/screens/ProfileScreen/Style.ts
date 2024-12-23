@@ -50,6 +50,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     paddingHorizontal: wp(4),
     paddingVertical: hp(2),
+    paddingBottom: hp(1.5),
     borderRadius: 8,
     marginBottom: hp(2),
   },
@@ -106,6 +107,11 @@ export const styles = StyleSheet.create({
     letterSpacing: 0.5,
     lineHeight: 22,
     color: colors.primaryBlack,
-    paddingBottom: hp(1),
+  },
+  divider: {
+    height: 1,
+    backgroundColor: colors.background,
+    width: '100%',
+    marginVertical: hp(1),
   },
 });

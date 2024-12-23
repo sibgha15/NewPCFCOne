@@ -1,4 +1,4 @@
-import {Platform, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -8,9 +8,9 @@ import {colors, fonts} from '../../../../res/themes';
 export const styles = StyleSheet.create({
   container: {
     height: hp(100),
-    backgroundColor: 'rgba(0,0,0,0.5)',
   },
   mainContainer: {
+    height: hp(91),
     backgroundColor: colors.background,
     borderTopLeftRadius: 32,
     borderTopRightRadius: 32,
@@ -103,11 +103,10 @@ export const styles = StyleSheet.create({
     letterSpacing: 0.5,
     lineHeight: 22,
     color: colors.primaryBlack,
-    paddingBottom: hp(1),
   },
   textInput: {
     fontFamily: fonts.fontFamily.primary,
-    fontSize: fonts.fontSize.medium,
+    fontSize: fonts.fontSize.normal,
     letterSpacing: 0.5,
     lineHeight: 22,
     color: colors.primaryBlack,
@@ -118,5 +117,11 @@ export const styles = StyleSheet.create({
     padding: 12,
     paddingVertical: 10,
     borderRadius: 8,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: colors.background,
+    width: '100%',
+    marginVertical: hp(1),
   },
 });

@@ -75,4 +75,13 @@ export const styles = StyleSheet.create({
     height: 88,
     textAlignVertical: 'top',
   },
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: colors.background,
+    paddingHorizontal: wp(4),
+    marginTop: hp(20),
+  },
 });

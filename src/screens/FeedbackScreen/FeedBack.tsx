@@ -7,6 +7,8 @@ import {
   TextInput,
   TouchableOpacity,
   Modal,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import StackHeader from '../../components/header/stackHeader';
 import {styles} from './Style';
@@ -42,7 +44,9 @@ const FeedBackScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      style={styles.container}>
       <StatusBar
         barStyle="dark-content"
         hidden={false}
@@ -113,7 +117,7 @@ const FeedBackScreen = () => {
           </View>
         </View>
 
-        <View style={[styles.card, {padding: 16}]}>
+        <View style={[styles.card, {padding: 16, marginBottom: hp(15)}]}>
           <Text style={[styles.heading, {paddingBottom: hp(1.5)}]}>
             Additional Comments (Optional)
           </Text>
@@ -123,14 +127,14 @@ const FeedBackScreen = () => {
             style={styles.inputBox}
           />
         </View>
-
+      </ScrollView>
+      <View style={styles.buttonContainer}>
         <RoundedButton
           onPress={() => setSuccessModalVisible(true)}
           title="Submit"
           disabled={!ratings || !device}
         />
-        <View style={{marginBottom: hp(4)}}></View>
-      </ScrollView>
+      </View>
 
       <Modal
         transparent={true}
@@ -144,7 +148,7 @@ const FeedBackScreen = () => {
           buttonText="Go back to Homepage"
         />
       </Modal>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 

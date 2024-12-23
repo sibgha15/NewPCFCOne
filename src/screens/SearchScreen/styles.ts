@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {colors, fonts} from '../../../res/themes';
 import {
   widthPercentageToDP as wp,
@@ -7,8 +7,8 @@ import {
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.background,
-    height: hp(100),
+    backgroundColor: colors.white,
+    paddingTop: Platform.OS === 'ios' ? hp(6) : 0,
   },
   searchBarContainer: {
     backgroundColor: colors.white,

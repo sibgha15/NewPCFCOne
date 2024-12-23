@@ -13,14 +13,21 @@ import {
   Accessibility,
   BlueQR,
   Chat,
+  Docs,
+  ExpandMoreIcon,
+  Facebook,
   GuideBook,
+  HandShakeIcon,
   Info,
+  Instagram,
   Language,
   Logout,
   Sheild,
+  ShowLess,
   StarOutline,
   Support,
   TaskIcon,
+  Twitter,
   UserAccount,
   UserAvatar,
 } from '../../../res/assets/images/svgs';
@@ -29,16 +36,20 @@ import {useNavigation} from '@react-navigation/native';
 
 const MenuScreen = () => {
   const [isEnabled, setIsEnabled] = useState(false);
+  const [showSocial, setShowSocial] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.container}>
       <StackHeader title={'Main Menu'} />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.flexView}>
           <View style={styles.userAvatarContainer}>
-            <UserAvatar height={50} width={50} />
+            <TouchableOpacity
+              onPress={() => navigation.navigate('profileScreen')}>
+              <UserAvatar height={50} width={50} />
+            </TouchableOpacity>
             <View style={styles.infoContainer}>
               <Text style={styles.name}>Ahmad Mustafa</Text>
               <Text style={styles.designation}>Senior Designer</Text>
@@ -110,6 +121,38 @@ const MenuScreen = () => {
             </TouchableOpacity>
             <View style={styles.separator}></View>
             <TouchableOpacity
+              onPress={() => setShowSocial(!showSocial)}
+              style={[
+                styles.cardItem,
+                {justifyContent: 'space-between', alignItems: 'center'},
+              ]}>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <HandShakeIcon width={22.17} height={22.17} />
+                <Text style={styles.cardItemText}>Social Media Links</Text>
+              </View>
+              {showSocial ? <ShowLess /> : <ExpandMoreIcon />}
+            </TouchableOpacity>
+            <View style={styles.separator}></View>
+            {showSocial && (
+              <View style={styles.socialContainer}>
+                <TouchableOpacity style={styles.cardItem}>
+                  <Facebook width={16} height={16} />
+                  <Text style={styles.socialText}>Facebook</Text>
+                </TouchableOpacity>
+                <View style={styles.separator}></View>
+                <TouchableOpacity style={styles.cardItem}>
+                  <Instagram width={16} height={16} />
+                  <Text style={styles.socialText}>Instagram</Text>
+                </TouchableOpacity>
+                <View style={styles.separator}></View>
+                <TouchableOpacity style={styles.cardItem}>
+                  <Twitter width={16} height={16} />
+                  <Text style={styles.socialText}>Twitter</Text>
+                </TouchableOpacity>
+                <View style={styles.separator}></View>
+              </View>
+            )}
+            <TouchableOpacity
               style={styles.cardItem}
               onPress={() => navigation.navigate('userGuideScreen')}>
               <GuideBook width={22.17} height={22.17} />
@@ -126,6 +169,13 @@ const MenuScreen = () => {
               onPress={() => navigation.navigate('feedbackScreen')}>
               <Chat width={22.17} height={22.17} />
               <Text style={styles.cardItemText}>Feedback</Text>
+            </TouchableOpacity>
+            <View style={styles.separator}></View>
+            <TouchableOpacity
+              style={styles.cardItem}
+              onPress={() => navigation.navigate('termsAndConditionScreen')}>
+              <Docs width={22.17} height={22.17} />
+              <Text style={styles.cardItemText}>Terms & Conditions</Text>
             </TouchableOpacity>
             <View style={styles.separator}></View>
             <TouchableOpacity

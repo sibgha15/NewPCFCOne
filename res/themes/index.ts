@@ -16,6 +16,7 @@ export const colors = {
   lightOrange: '#FFB35B1A',
   orange: '#D78B33',
   alert: '#FC493D',
+  success: '#279457',
 };
 
 export const fonts = {

@@ -1,27 +1,18 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  FlatList,
-} from 'react-native';
+import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import {styles} from './styles';
 import {
   ArrowIconLeft,
   BreakingNews,
-  Calendar,
   Dot,
   GraySearchIcon,
   ImageIcon,
   Payroll,
-  SearchIcon,
   Subscriptions,
   UserAvatar,
 } from '../../../res/assets/images/svgs';
 import {useNavigation} from '@react-navigation/native';
 import {colors} from '../../../res/themes';
-import {ScrollView} from 'react-native-gesture-handler';
 
 const notifications = [
   {
@@ -120,7 +111,7 @@ const ActivityScreen = () => {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <ArrowIconLeft />
@@ -166,15 +157,14 @@ const ActivityScreen = () => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <FlatList
-          data={filteredNotifications}
-          renderItem={renderNotificationItem}
-          keyExtractor={item => item.id}
-          contentContainerStyle={styles.mainContainer}
-        />
-      </ScrollView>
-    </SafeAreaView>
+      <FlatList
+        data={filteredNotifications}
+        renderItem={renderNotificationItem}
+        keyExtractor={item => item.id}
+        style={{flex: 1}}
+        contentContainerStyle={styles.mainContainer}
+      />
+    </View>
   );
 };
 

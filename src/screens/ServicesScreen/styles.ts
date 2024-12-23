@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {colors, fonts} from '../../../res/themes';
 import {
   widthPercentageToDP as wp,
@@ -7,84 +7,98 @@ import {
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.white,
     flex: 1,
-    paddingTop: hp(5),
+    backgroundColor: colors.background,
   },
-  subHeader: {
+  header: {
+    backgroundColor: colors.primary,
+    paddingBottom: hp(2),
+  },
+  topHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: wp(4),
-    paddingVertical: hp(2),
+    paddingTop: Platform.OS === 'ios' ? hp(7) : hp(1.5),
   },
-  subHeaderText: {
-    fontSize: fonts.fontSize.xl,
-    lineHeight: 26,
+  headerText: {
+    color: colors.white,
+    fontSize: fonts.fontSize['2xl'],
+    textAlign: 'center',
     fontFamily: fonts.fontFamily.medium,
-    color: colors.primaryBlack,
   },
-  listContainer: {
-    paddingVertical: hp(1),
+  searchContainer: {
+    marginTop: -hp(1),
+    marginBottom: hp(3),
+  },
+  mainContainer: {
+    backgroundColor: colors.background,
+    flex: 1,
+    borderTopLeftRadius: 32,
+    borderTopRightRadius: 32,
+    marginTop: -hp(3),
+    paddingTop: hp(3),
     paddingHorizontal: wp(4),
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: colors.white,
+    paddingBottom: hp(8),
   },
-  list: {
-    // backgroundColor: colors.white,
-  },
-  userAvatarContainer: {
-    flexDirection: 'row',
-    gap: wp(3),
-    alignItems: 'center',
-  },
-
-  infoContainer: {
+  cardContainer: {
     flexDirection: 'column',
+    gap: hp(2),
+    paddingBottom: hp(10),
   },
-
-  name: {
-    fontSize: fonts.fontSize.xl,
-    color: colors.primaryBlack,
-    fontFamily: fonts.fontFamily.medium,
+  flexView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: wp(4),
   },
-
-  designation: {
-    fontSize: fonts.fontSize.normal,
-    fontFamily: fonts.fontFamily.primary,
-    color: colors.primaryBlack,
+  card: {
+    padding: 16,
+    borderRadius: 12,
+    backgroundColor: colors.white,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-
-  iconContainer: {
+  cardIconWrapper: {
     width: 45,
     height: 45,
-    borderRadius: 25,
-    backgroundColor: colors.grayTransparent,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#0000001A',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 3.84,
-    elevation: 1,
-  },
-
-  statusContainer: {
-    paddingVertical: 4,
-    paddingHorizontal: 12,
     borderRadius: 30,
-    backgroundColor: colors.lightOrange,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#177DB71A',
   },
-
-  statusText: {
-    color: colors.orange,
-    fontSize: fonts.fontSize.small,
+  cardText: {
+    fontSize: fonts.fontSize.large,
     fontFamily: fonts.fontFamily.medium,
-    textTransform: 'uppercase',
+    color: colors.primaryBlack,
+    width: '75%',
+  },
+  cardWrapper: {
+    borderRadius: 12,
+    backgroundColor: colors.white,
+    overflow: 'hidden',
+  },
+  innerCard: {
+    marginHorizontal: wp(4),
+    paddingHorizontal: wp(4),
+    backgroundColor: colors.background,
+    paddingVertical: 12,
+    borderRadius: 16,
+    marginBottom: hp(2),
+  },
+  innerCardText: {
+    color: colors.primaryBlack,
+    fontSize: fonts.fontSize.medium,
+    fontFamily: fonts.fontFamily.primary,
+    letterSpacing: 0.5,
+  },
+  divider: {
+    width: '100%',
+    height: 1,
+    backgroundColor: colors.grey,
+    marginVertical: hp(1),
+  },
+  innerCardWrapper: {
+    backgroundColor: colors.white,
   },
 });

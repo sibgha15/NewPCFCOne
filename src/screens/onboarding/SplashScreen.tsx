@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {View, Text, StatusBar} from 'react-native';
 import {styles} from './Styles';
 import {SplashLogo} from '../../../res/assets/images/svgs';
+
 const ServicesScreen = ({navigation}: any) => {
   useEffect(() => {
     setTimeout(() => {

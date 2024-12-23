@@ -9,6 +9,7 @@ import PrivacyPolicyScreen from '../../src/screens/PrivacyPolicyScreen/PrivacyPo
 import FeedBackScreen from '../../src/screens/FeedbackScreen/FeedBack';
 import ProfileScreen from '../../src/screens/ProfileScreen/Index';
 import DigitalCardScreen from '../../src/screens/DigitalCardScreen';
+import TermsAndConditionScreen from '../../src/screens/TermsAndConditions';
 const Stack = createStackNavigator();
 
 export default function MenuStack() {
@@ -26,6 +27,11 @@ export default function MenuStack() {
       <Stack.Screen name="feedbackScreen" component={FeedBackScreen} />
       <Stack.Screen name="profileScreen" component={ProfileScreen} />
       <Stack.Screen name="digitalCardScreen" component={DigitalCardScreen} />
+      <Stack.Screen
+        name="termsAndConditionScreen"
+        component={TermsAndConditionScreen}
+      />
     </Stack.Navigator>
   );
+  ``;
 }

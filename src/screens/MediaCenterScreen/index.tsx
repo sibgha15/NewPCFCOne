@@ -59,7 +59,9 @@ const MediaCenterScreen = () => {
               <RightArrow />
             </TouchableOpacity>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('PublicationScreen')}
+            style={styles.card}>
             <View style={styles.flexView}>
               <View style={styles.cardIconWrapper}>
                 <Publications width={28} height={28} />
@@ -70,7 +72,9 @@ const MediaCenterScreen = () => {
               <RightArrow />
             </TouchableOpacity>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity
+            style={styles.card}
+            onPress={() => navigation.navigate('PromotionScreen')}>
             <View style={styles.flexView}>
               <View style={styles.cardIconWrapper}>
                 <Promotions width={28} height={28} />

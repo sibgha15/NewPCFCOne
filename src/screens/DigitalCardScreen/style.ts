@@ -85,6 +85,7 @@ export const styles = StyleSheet.create({
     fontSize: fonts.fontSize.large,
     lineHeight: 24,
     letterSpacing: 0.5,
+    marginTop: 12,
   },
   infoText: {
     color: colors.darkGray,
@@ -92,10 +93,13 @@ export const styles = StyleSheet.create({
     fontFamily: fonts.fontFamily.primary,
     lineHeight: 20,
     letterSpacing: 0.5,
+    marginTop: 6,
   },
   wishlistButton: {
     backgroundColor: colors.black,
     borderRadius: 60,
+    flexDirection: 'row',
+    gap: wp(2),
     alignItems: 'center',
     justifyContent: 'center',
     height: 50,

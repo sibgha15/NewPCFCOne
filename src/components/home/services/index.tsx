@@ -15,32 +15,33 @@ import {
   MyTasks,
   Neuron,
   Payroll,
+  Stars,
   Teams,
 } from '../../../../res/assets/images/svgs';
 import {fonts} from '../../../../res/themes';
 
 const Services = ({navigation}: any) => {
   const services = [
-    {
-      id: 1,
-      logo: (
-        <View style={styles.iconWrapper}>
-          <Attendance width={36} height={36} />
-        </View>
-      ),
-      name: 'Attendance',
-      routeName: 'AttendanceScreen',
-    },
-    {
-      id: 2,
-      logo: (
-        <View style={[styles.iconWrapper, {backgroundColor: '#8DC83A1A'}]}>
-          <Payroll width={36} height={36} />
-        </View>
-      ),
-      name: 'Payroll',
-      routeName: 'PayrollScreen',
-    },
+    // {
+    //   id: 1,
+    //   logo: (
+    //     <View style={styles.iconWrapper}>
+    //       <Attendance width={36} height={36} />
+    //     </View>
+    //   ),
+    //   name: 'Attendance',
+    //   routeName: 'AttendanceScreen',
+    // },
+    // {
+    //   id: 2,
+    //   logo: (
+    //     <View style={[styles.iconWrapper, {backgroundColor: '#8DC83A1A'}]}>
+    //       <Payroll width={36} height={36} />
+    //     </View>
+    //   ),
+    //   name: 'Payroll',
+    //   routeName: 'PayrollScreen',
+    // },
     {
       id: 3,
       logo: (
@@ -64,6 +65,16 @@ const Services = ({navigation}: any) => {
     {
       id: 5,
       logo: (
+        <View style={[styles.iconWrapper, {backgroundColor: '#883BA91A'}]}>
+          <Stars width={36} height={36} />
+        </View>
+      ),
+      name: 'Star of the Month',
+      routeName: 'StarOfYTheMonthScreen',
+    },
+    {
+      id: 6,
+      logo: (
         <View style={[styles.iconWrapper, {backgroundColor: '#F83E3E1A'}]}>
           <Calendar width={36} height={36} />
         </View>
@@ -72,7 +83,7 @@ const Services = ({navigation}: any) => {
       routeName: 'CalendarScreen',
     },
     {
-      id: 6,
+      id: 7,
       logo: (
         <View style={[styles.iconWrapper, {backgroundColor: '#5059C91A'}]}>
           <Teams width={36} height={36} />
@@ -82,7 +93,7 @@ const Services = ({navigation}: any) => {
       routeName: 'TeamsScreen',
     },
     {
-      id: 7,
+      id: 8,
       logo: (
         <View style={[styles.iconWrapper, {backgroundColor: '#F83E3E1A'}]}>
           <MediaCenter width={36} height={36} />
@@ -92,13 +103,13 @@ const Services = ({navigation}: any) => {
       routeName: 'MediaCenterScreen',
     },
     {
-      id: 8,
+      id: 9,
       logo: <Neuron width={60} height={60} />,
       name: 'Neuron',
       routeName: 'NeuronScreen',
     },
     {
-      id: 9,
+      id: 10,
       logo: (
         <View style={[styles.iconWrapper, {backgroundColor: '#038756'}]}>
           <Esaad width={36} height={36} />
@@ -108,7 +119,7 @@ const Services = ({navigation}: any) => {
       routeName: 'EsaadScreen',
     },
     {
-      id: 10,
+      id: 11,
       logo: (
         <View style={[styles.iconWrapper, {backgroundColor: '#C09949'}]}>
           <Fazaa width={36} height={36} />

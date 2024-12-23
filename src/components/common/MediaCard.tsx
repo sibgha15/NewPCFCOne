@@ -10,7 +10,7 @@ interface MediaCardProps {
   imageSource: any;
   title: string;
   date: string;
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 const MediaCard: React.FC<MediaCardProps> = ({

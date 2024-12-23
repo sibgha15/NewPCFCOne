@@ -2,12 +2,10 @@ import React, {useState} from 'react';
 import {
   View,
   Text,
-  Alert,
-  KeyboardAvoidingView,
   StatusBar,
   ImageBackground,
+  TouchableOpacity,
 } from 'react-native';
-import RoundedButton from '../../components/common/roundedButton';
 import {styles} from './style';
 import {useHeaderHeight} from '@react-navigation/elements';
 import {
@@ -17,7 +15,6 @@ import {
 import {Logo} from '../../../res/assets/images/svgs';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
-import CustomInput from '../../components/common/Input';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -53,14 +50,12 @@ const LoginScreen = () => {
   };
 
   const handleLogin = () => {
-    if (validateFields()) {
-      navigation.dispatch(
-        CommonActions.reset({
-          index: 1,
-          routes: [{name: 'TabNavigator'}],
-        }),
-      );
-    }
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 1,
+        routes: [{name: 'TabNavigator'}],
+      }),
+    );
   };
 
   const handleFocus = (field: any) => {
@@ -74,17 +69,24 @@ const LoginScreen = () => {
         height: hp(100),
         width: wp(100),
       }}>
-      <KeyboardAvoidingView
+      <StatusBar
+        barStyle="light-content"
+        hidden={false}
+        backgroundColor="transparent"
+        translucent={true}
+      />
+      <Logo style={styles.logo} />
+      <View style={{position: 'absolute', bottom: hp(6), width: '100%'}}>
+        <TouchableOpacity onPress={handleLogin} style={styles.button}>
+          <Text style={[styles.buttonText]}>{'Login'}</Text>
+        </TouchableOpacity>
+        <Text style={styles.forgetButton}>Contact Service Desk</Text>
+      </View>
+      {/* <KeyboardAvoidingView
         keyboardVerticalOffset={height}
         behavior="padding"
         style={styles.container}>
-        <StatusBar
-          barStyle="light-content"
-          hidden={false}
-          backgroundColor="transparent"
-          translucent={true}
-        />
-        <Logo style={styles.logo} />
+       
         <View style={styles.bottomSheet}>
           <Text style={styles.loginText}>Login</Text>
           <View>
@@ -105,15 +107,10 @@ const LoginScreen = () => {
               isPassword
               errorMessage={errors.password}
             />
-            <RoundedButton
-              disabled={!email || !password}
-              title="Login"
-              onPress={handleLogin}
-            />
-            <Text style={styles.forgetButton}>Forgot your Password?</Text>
+          
           </View>
         </View>
-      </KeyboardAvoidingView>
+      </KeyboardAvoidingView> */}
     </ImageBackground>
   );
 };
